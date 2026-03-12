@@ -9,7 +9,6 @@
   <body>
     <header>
       <img src="img/banner2.jpg" class="banner" />
-      <h1>ClimbingTrack</h1>
     </header>
 
     <nav>
@@ -21,15 +20,19 @@
     </nav>
 
     <div class="container">
-      <div class="lang">
-        <h2>Kontolöschung (Deutsch)</h2>
+      <div id="lang-switcher" style="text-align: center; margin: 20px 0">
+        <button onclick="setLang('de')">Deutsch</button>
+        <button onclick="setLang('en')">English</button>
+      </div>
+      <div class="lang lang-de">
+        <h2>Kontolöschung</h2>
 
         <p>
           Nutzer können ihr Konto direkt in der ClimbingTrack-App dauerhaft
           löschen:
         </p>
 
-        <p><b>Einstellungen → Konto löschen</b></p>
+        <p><b>Menü -> Profil -> Benutzer löschen</b></p>
 
         <h3>Alternative Löschanfrage</h3>
 
@@ -38,33 +41,25 @@
           per E-Mail gestellt werden:
         </p>
 
-        <p><b>support@deinemail.de</b></p>
+        <p><b>climbingtrack@gmail.com</b></p>
 
-        <h3>Gelöschte Daten</h3>
-
-        <ul>
-          <li>Accountdaten (E-Mail-Adresse, Nutzer-ID)</li>
-          <li>Gespeicherte Begehungen</li>
-          <li>Bewertungen und Kommentare</li>
-        </ul>
-
-        <h3>Aufbewahrung</h3>
-
+        <h3>Hinweis</h3>
         <p>
-          Die Daten werden aus der aktiven Datenbank gelöscht. Backups können
-          aus technischen Gründen bis zu 30 Tage bestehen bleiben.
+          Begehungen und Bewertungen werden nach Löschung anonymisiert, alle
+          personenbezogenen Daten werden entfernt. Weitere Informationen dazu
+          finden Sie in unserer <a href="privacy.html">Datenschutzerklärung</a>.
         </p>
       </div>
 
-      <div class="lang">
-        <h2>Delete Account (English)</h2>
+      <div class="lang lang-en">
+        <h2>Delete Account</h2>
 
         <p>
           Users can permanently delete their account directly in the
           ClimbingTrack app:
         </p>
 
-        <p><b>Settings → Delete Account</b></p>
+        <p><b>Menu -> Profile -> Delete user</b></p>
 
         <h3>Alternative request</h3>
 
@@ -73,25 +68,34 @@
           email:
         </p>
 
-        <p><b>support@deinemail.de</b></p>
+        <p><b>climbingtrack@gmail.com</b></p>
 
-        <h3>Deleted data</h3>
-
-        <ul>
-          <li>Account data (email address, user ID)</li>
-          <li>Saved climbing ticks</li>
-          <li>Ratings and comments</li>
-        </ul>
-
-        <h3>Retention</h3>
-
+        <h3>Note</h3>
         <p>
-          Data is removed from the active database. Backups may remain for up to
-          30 days for technical reasons.
+          Climbing ticks, ratings, and comments are anonymized after account
+          deletion, and all personal data is removed. For more details, see our
+          <a href="privacy.html">Privacy Policy</a>.
         </p>
       </div>
     </div>
 
     <footer>© 2026 Matthias Felix. All rights reserved.</footer>
+    <script>
+      function setLang(lang) {
+        localStorage.setItem("climbingtrack-lang", lang);
+        showLang(lang);
+      }
+
+      function showLang(lang) {
+        document
+          .querySelectorAll(".lang")
+          .forEach((el) => (el.style.display = "none"));
+        const active = document.querySelector(".lang-" + lang);
+        if (active) active.style.display = "block";
+      }
+
+      const savedLang = localStorage.getItem("climbingtrack-lang") || "de";
+      showLang(savedLang);
+    </script>
   </body>
 </html>

@@ -9,7 +9,6 @@
   <body>
     <header>
       <img src="img/banner2.jpg" class="banner" />
-      <h1>ClimbingTrack</h1>
     </header>
 
     <nav>
@@ -21,74 +20,146 @@
     </nav>
 
     <div class="container">
-      <div class="lang">
-        <h2>Datenschutzerklärung (Deutsch)</h2>
+      <div id="lang-switcher" style="text-align: center; margin: 20px 0">
+        <button onclick="setLang('de')">Deutsch</button>
+        <button onclick="setLang('en')">English</button>
+      </div>
+      <div class="lang lang-de">
+        <h2>Datenschutzerklärung</h2>
 
         <p>
-          ClimbingTrack verarbeitet personenbezogene Daten nur soweit dies für
-          den Betrieb der App erforderlich ist.
+          ClimbingTrack verarbeitet personenbezogene Daten nur soweit nötig, um
+          die Funktionen der App bereitzustellen.
         </p>
 
         <h3>Erhobene Daten</h3>
-
         <ul>
-          <li>E-Mail-Adresse</li>
-          <li>optional gewählter Nutzername</li>
+          <li>
+            E-Mail-Adresse (nur für Login und Bestätigungslink; wird niemals
+            weitergegeben)
+          </li>
+          <li>
+            Benutzername (optional; erforderlich, wenn Sie namentlich bei
+            Begehungen oder in Statistiken angezeigt werden möchten oder als
+            Admin einer Halle eingetragen werden sollen)
+          </li>
           <li>Begehungen, Bewertungen und Kommentare</li>
         </ul>
 
-        <h3>Zweck</h3>
-
+        <h3>Freiwilligkeit und Sichtbarkeit</h3>
         <p>
-          Die Daten werden verwendet, um Benutzerkonten zu verwalten, Begehungen
-          zu speichern und Statistiken anzuzeigen.
+          Nutzer können selbst entscheiden, ob ihre Begehungen oder Bewertungen
+          angezeigt werden und ob sie in Statistiken erscheinen möchten. Das
+          bedeutet, dass Begehungen und Bewertungen anonym bleiben, wenn der
+          Nutzer dies wünscht.
         </p>
 
-        <h3>Datenweitergabe</h3>
+        <h3>Verteilung zur Offline-Nutzung</h3>
+        <p>
+          Um die App auch offline nutzbar zu machen, werden Begehungen und
+          Bewertungen auf anderen Geräten synchronisiert. Bei Löschung eines
+          Benutzerkontos verbleiben diese Daten solange auf den Geräten anderer
+          Nutzer, bis diese die App erneut öffnen und eine Synchronisation
+          erfolgt. E-Mail-Adressen werden unter keinen Umständen verteilt.
+          Technische Backups können die Daten aus Gründen der Wiederherstellung
+          bis zu 30 Tage speichern.
+        </p>
 
+        <h3>Verwendung der Daten</h3>
+        <p>
+          Die Daten werden genutzt, um Benutzerkonten zu verwalten, Begehungen
+          zu speichern, Statistiken anzuzeigen und die Offline-Funktionalität zu
+          gewährleisten. ClimbingTrack richtet sich in erster Linie an
+          Jugendliche und Erwachsene und ist nicht speziell für Kinder unter 13
+          Jahren konzipiert. Falls Kinder unter 13 die App nutzen möchten,
+          sollte die Registrierung nur mit Zustimmung einer
+          erziehungsberechtigten Person erfolgen. Die verwendete E-Mail-Adresse
+          wird – wie bei allen Nutzern – niemals weitergegeben.
+        </p>
+
+        <h3>Weitergabe an Dritte</h3>
         <p>
           Es erfolgt keine Weitergabe oder Verkauf personenbezogener Daten an
           Dritte.
         </p>
 
         <h3>Kontakt</h3>
-
-        <p>support@deinemail.de</p>
+        <p>support@climbingtrack.com</p>
       </div>
 
-      <div class="lang">
-        <h2>Privacy Policy (English)</h2>
+      <div class="lang lang-en">
+        <h2>Privacy Policy</h2>
 
         <p>
-          ClimbingTrack processes personal data only to provide the
-          functionality of the application.
+          ClimbingTrack only processes personal data as necessary to provide the
+          app's functionality.
         </p>
 
         <h3>Collected data</h3>
-
         <ul>
-          <li>Email address</li>
-          <li>Optional username</li>
-          <li>Climbing activity (ticks, ratings, comments)</li>
+          <li>
+            Email address (only for login and confirmation link; never shared)
+          </li>
+          <li>
+            Username (optional; required if you want your name displayed in
+            climbing ticks or statistics, or to be registered as an admin of a
+            gym)
+          </li>
+          <li>Climbing ticks, ratings, and comments</li>
         </ul>
 
-        <h3>Purpose</h3>
-
+        <h3>Voluntary sharing and visibility</h3>
         <p>
-          The data is used to manage user accounts, store climbing activities,
-          and provide statistics.
+          Users can choose whether their climbing ticks or ratings are visible
+          and whether they appear in statistics. This ensures that climbing data
+          remains anonymous if the user wishes.
         </p>
 
-        <h3>Data sharing</h3>
+        <h3>Distribution for offline use</h3>
+        <p>
+          To enable offline usage, climbing ticks and ratings are distributed to
+          other devices. When a user deletes their account, this data remains on
+          other users’ devices until they open the app again and synchronization
+          occurs. Email addresses are never shared. Technical backups may retain
+          data for up to 30 days for recovery purposes.
+        </p>
 
+        <h3>Use of data</h3>
+        <p>
+          Data is used to manage user accounts, store climbing activity, display
+          statistics, and maintain offline functionality. ClimbingTrack is
+          primarily designed for teens and adults and is not specifically
+          intended for children under the age of 13. If children under 13 wish
+          to use the app, registration should only occur with the permission of
+          a parent or legal guardian. As with all users, the email address used
+          for registration is never shared.
+        </p>
+
+        <h3>Data sharing with third parties</h3>
         <p>Personal data is not sold or shared with third parties.</p>
 
         <h3>Contact</h3>
-
-        <p>support@deinemail.de</p>
+        <p>support@climbingtrack.com</p>
       </div>
     </div>
 
     <footer>© 2026 Matthias Felix. All rights reserved.</footer>
+    <script>
+      function setLang(lang) {
+        localStorage.setItem("climbingtrack-lang", lang);
+        showLang(lang);
+      }
+
+      function showLang(lang) {
+        document
+          .querySelectorAll(".lang")
+          .forEach((el) => (el.style.display = "none"));
+        const active = document.querySelector(".lang-" + lang);
+        if (active) active.style.display = "block";
+      }
+
+      const savedLang = localStorage.getItem("climbingtrack-lang") || "de";
+      showLang(savedLang);
+    </script>
   </body>
 </html>

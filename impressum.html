@@ -9,7 +9,6 @@
   <body>
     <header>
       <img src="img/banner2.jpg" class="banner" />
-      <h1>ClimbingTrack</h1>
     </header>
 
     <nav>
@@ -21,6 +20,10 @@
     </nav>
 
     <div class="container">
+      <div id="lang-switcher" style="text-align: center; margin: 20px 0">
+        <button onclick="setLang('de')">Deutsch</button>
+        <button onclick="setLang('en')">English</button>
+      </div>
       <h2>Impressum / Imprint</h2>
 
       <p>
@@ -36,5 +39,22 @@
     </div>
 
     <footer>© 2026 Matthias Felix. All rights reserved.</footer>
+    <script>
+      function setLang(lang) {
+        localStorage.setItem("climbingtrack-lang", lang);
+        showLang(lang);
+      }
+
+      function showLang(lang) {
+        document
+          .querySelectorAll(".lang")
+          .forEach((el) => (el.style.display = "none"));
+        const active = document.querySelector(".lang-" + lang);
+        if (active) active.style.display = "block";
+      }
+
+      const savedLang = localStorage.getItem("climbingtrack-lang") || "de";
+      showLang(savedLang);
+    </script>
   </body>
 </html>
