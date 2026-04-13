@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <title>Imprint – ClimbingTrack</title>
+    <title>Impressum - ClimbingTrack</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -12,11 +12,11 @@
     </header>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="delete-account.html">Delete Account</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="impressum.html">Imprint</a>
+      <a href="index.html" data-i18n="nav-home">Startseite</a>
+      <a href="delete-account.html" data-i18n="nav-delete">Konto löschen</a>
+      <a href="privacy.html" data-i18n="nav-privacy">Datenschutz</a>
+      <a href="terms.html" data-i18n="nav-terms">Nutzungsbedingungen</a>
+      <a href="impressum.html" data-i18n="nav-imprint">Impressum</a>
     </nav>
 
     <div class="container">
@@ -24,22 +24,62 @@
         <button onclick="setLang('de')">Deutsch</button>
         <button onclick="setLang('en')">English</button>
       </div>
-      <h2>Impressum / Imprint</h2>
+      <div class="lang lang-de">
+        <h2>Impressum</h2>
 
-      <p>
-        Name: Matthias Felix<br />
-        Adresse: Waldweg 14, 91054 Buckenhof<br />
-        Email: climbingtrack@gmail.com
-      </p>
+        <p>
+          Name: Matthias Felix<br />
+          Adresse: Waldweg 14, 91054 Buckenhof<br />
+          E-Mail: climbingtrack@gmail.com
+        </p>
 
-      <p>
-        This website provides information related to the ClimbingTrack mobile
-        application.
-      </p>
+        <p>
+          Diese Website stellt Informationen zur mobilen Anwendung
+          <b>ClimbingTrack</b> bereit.
+        </p>
+      </div>
+
+      <div class="lang lang-en">
+        <h2>Imprint</h2>
+
+        <p>
+          Name: Matthias Felix<br />
+          Address: Waldweg 14, 91054 Buckenhof, Germany<br />
+          Email: climbingtrack@gmail.com
+        </p>
+
+        <p>
+          This website provides information related to the mobile application
+          <b>ClimbingTrack</b>.
+        </p>
+      </div>
     </div>
 
-    <footer>© 2026 Matthias Felix. All rights reserved.</footer>
+    <footer>
+      <span data-i18n="footer"
+        >© 2026 Matthias Felix. Alle Rechte vorbehalten.</span
+      >
+    </footer>
     <script>
+      const translations = {
+        de: {
+          "nav-home": "Startseite",
+          "nav-delete": "Konto löschen",
+          "nav-privacy": "Datenschutz",
+          "nav-terms": "Nutzungsbedingungen",
+          "nav-imprint": "Impressum",
+          footer: "© 2026 Matthias Felix. Alle Rechte vorbehalten.",
+        },
+        en: {
+          "nav-home": "Home",
+          "nav-delete": "Delete Account",
+          "nav-privacy": "Privacy Policy",
+          "nav-terms": "Terms of Service",
+          "nav-imprint": "Imprint",
+          footer: "© 2026 Matthias Felix. All rights reserved.",
+        },
+      };
+
       function setLang(lang) {
         localStorage.setItem("climbingtrack-lang", lang);
         showLang(lang);
@@ -51,6 +91,12 @@
           .forEach((el) => (el.style.display = "none"));
         const active = document.querySelector(".lang-" + lang);
         if (active) active.style.display = "block";
+
+        const t = translations[lang] || translations.de;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (t[key]) el.textContent = t[key];
+        });
       }
 
       const savedLang = localStorage.getItem("climbingtrack-lang") || "de";

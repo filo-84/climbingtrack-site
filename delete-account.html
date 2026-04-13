@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <title>Delete Account – ClimbingTrack</title>
+    <title>Kontolöschung - ClimbingTrack</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -12,11 +12,11 @@
     </header>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="delete-account.html">Delete Account</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="impressum.html">Imprint</a>
+      <a href="index.html" data-i18n="nav-home">Startseite</a>
+      <a href="delete-account.html" data-i18n="nav-delete">Konto löschen</a>
+      <a href="privacy.html" data-i18n="nav-privacy">Datenschutz</a>
+      <a href="terms.html" data-i18n="nav-terms">Nutzungsbedingungen</a>
+      <a href="impressum.html" data-i18n="nav-imprint">Impressum</a>
     </nav>
 
     <div class="container">
@@ -45,9 +45,13 @@
 
         <h3>Hinweis</h3>
         <p>
-          Begehungen und Bewertungen werden nach Löschung anonymisiert, alle
-          personenbezogenen Daten werden entfernt. Weitere Informationen dazu
-          finden Sie in unserer <a href="privacy.html">Datenschutzerklärung</a>.
+          Personenbezogene Daten werden bei Kontolöschung auf dem Server
+          sofort gelöscht und nicht mehr herausgegeben. Begehungen,
+          Bewertungen und Kommentare werden anonymisiert. Inhalte, die bereits
+          auf anderen synchronisierten Geräten gespeichert wurden, können dort
+          bis zur nächsten Synchronisation vorübergehend lokal vorhanden sein.
+          Weitere Informationen dazu finden Sie in unserer
+          <a href="privacy.html">Datenschutzerklärung</a>.
         </p>
       </div>
 
@@ -72,15 +76,41 @@
 
         <h3>Note</h3>
         <p>
-          Climbing ticks, ratings, and comments are anonymized after account
-          deletion, and all personal data is removed. For more details, see our
+          Personal data is deleted from the server immediately when an account
+          is deleted and is no longer disclosed. Climbing ticks, ratings, and
+          comments are anonymized. Content already stored on other synchronized
+          devices may temporarily remain there locally until the next
+          synchronization. For more details, see our
           <a href="privacy.html">Privacy Policy</a>.
         </p>
       </div>
     </div>
 
-    <footer>© 2026 Matthias Felix. All rights reserved.</footer>
+    <footer>
+      <span data-i18n="footer"
+        >© 2026 Matthias Felix. Alle Rechte vorbehalten.</span
+      >
+    </footer>
     <script>
+      const translations = {
+        de: {
+          "nav-home": "Startseite",
+          "nav-delete": "Konto löschen",
+          "nav-privacy": "Datenschutz",
+          "nav-terms": "Nutzungsbedingungen",
+          "nav-imprint": "Impressum",
+          footer: "© 2026 Matthias Felix. Alle Rechte vorbehalten.",
+        },
+        en: {
+          "nav-home": "Home",
+          "nav-delete": "Delete Account",
+          "nav-privacy": "Privacy Policy",
+          "nav-terms": "Terms of Service",
+          "nav-imprint": "Imprint",
+          footer: "© 2026 Matthias Felix. All rights reserved.",
+        },
+      };
+
       function setLang(lang) {
         localStorage.setItem("climbingtrack-lang", lang);
         showLang(lang);
@@ -92,6 +122,12 @@
           .forEach((el) => (el.style.display = "none"));
         const active = document.querySelector(".lang-" + lang);
         if (active) active.style.display = "block";
+
+        const t = translations[lang] || translations.de;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (t[key]) el.textContent = t[key];
+        });
       }
 
       const savedLang = localStorage.getItem("climbingtrack-lang") || "de";

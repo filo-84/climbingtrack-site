@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <title>Terms of Service – ClimbingTrack</title>
+    <title>Nutzungsbedingungen - ClimbingTrack</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -12,11 +12,11 @@
     </header>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="delete-account.html">Delete Account</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="impressum.html">Imprint</a>
+      <a href="index.html" data-i18n="nav-home">Startseite</a>
+      <a href="delete-account.html" data-i18n="nav-delete">Konto löschen</a>
+      <a href="privacy.html" data-i18n="nav-privacy">Datenschutz</a>
+      <a href="terms.html" data-i18n="nav-terms">Nutzungsbedingungen</a>
+      <a href="impressum.html" data-i18n="nav-imprint">Impressum</a>
     </nav>
 
     <div class="container">
@@ -26,6 +26,7 @@
       </div>
       <div class="lang lang-de">
         <h2>Nutzungsbedingungen</h2>
+        <p><strong>Stand:</strong> 14. April 2026</p>
 
         <p>
           Diese Nutzungsbedingungen regeln die Nutzung der mobilen App
@@ -97,9 +98,13 @@
 
         <h3>7. Haftungsausschluss</h3>
         <p>
-          Die App wird "wie gesehen" bereitgestellt. Der Betreiber übernimmt
-          keine Haftung für Schäden, die durch die Nutzung oder Nicht‑Nutzung
-          der App entstehen, soweit gesetzlich zulässig.
+          Die App wird "wie besehen" bereitgestellt. Für Schäden aus der
+          Verletzung des Lebens, des Körpers oder der Gesundheit sowie für
+          Schäden, die auf vorsätzlicher oder grob fahrlässiger
+          Pflichtverletzung beruhen, haftet der Betreiber unbeschränkt. Bei
+          leicht fahrlässiger Verletzung wesentlicher Pflichten ist die Haftung
+          auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Im Übrigen
+          ist die Haftung ausgeschlossen, soweit gesetzlich zulässig.
         </p>
 
         <h3>8. Geistiges Eigentum</h3>
@@ -111,9 +116,12 @@
 
         <h3>9. Änderungen der Nutzungsbedingungen</h3>
         <p>
-          Diese Nutzungsbedingungen können jederzeit aktualisiert werden. Nutzer
-          werden über wesentliche Änderungen informiert. Die weitere Nutzung der
-          App gilt als Zustimmung zu den aktualisierten Bedingungen.
+          Diese Nutzungsbedingungen können aktualisiert werden. Über wesentliche
+          Änderungen werden Nutzer vor Inkrafttreten in geeigneter Form
+          informiert. Wesentliche Änderungen werden nur wirksam, wenn Nutzer
+          ihnen aktiv zustimmen. Rein redaktionelle Änderungen oder Änderungen,
+          die aufgrund gesetzlicher Vorgaben erforderlich sind, bleiben hiervon
+          unberührt.
         </p>
 
         <h3>10. Kontakt</h3>
@@ -124,15 +132,17 @@
 
         <h3>11. Anwendbares Recht und Gerichtsstand</h3>
         <p>
-          Diese Nutzungsbedingungen unterliegen dem Recht der Bundesrepublik
-          Deutschland. Für Streitigkeiten im Zusammenhang mit diesen
-          Nutzungsbedingungen sind die zuständigen Gerichte in Deutschland
-          zuständig.
+          Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des
+          UN‑Kaufrechts. Für Verbraucher gilt diese Rechtswahl nur, soweit
+          dadurch der Schutz zwingender Bestimmungen des Staates ihres
+          gewöhnlichen Aufenthalts nicht entzogen wird. Der gesetzliche
+          Gerichtsstand bleibt unberührt.
         </p>
       </div>
 
       <div class="lang lang-en">
         <h2>Terms of Service</h2>
+        <p><strong>Last updated:</strong> April 14, 2026</p>
 
         <p>
           These Terms of Service govern the use of the mobile application
@@ -195,9 +205,12 @@
 
         <h3>7. Liability</h3>
         <p>
-          The app is provided “as is.” The operator is not liable for any
-          damages arising from the use or inability to use the app, to the
-          extent permitted by law.
+          The app is provided “as is.” The operator is fully liable for damages
+          arising from injury to life, body, or health, and for damages caused
+          by intent or gross negligence. In cases of slight negligence involving
+          a material contractual obligation, liability is limited to foreseeable
+          damage typical for this type of contract. In all other cases,
+          liability is excluded to the extent permitted by law.
         </p>
 
         <h3>8. Intellectual property</h3>
@@ -209,9 +222,10 @@
 
         <h3>9. Changes to the Terms</h3>
         <p>
-          These Terms may be updated at any time. Users will be informed of
-          significant changes. Continued use of the app constitutes acceptance
-          of the updated Terms.
+          These Terms may be updated. Users will be informed of material changes
+          before they take effect. Material changes become effective only if
+          users actively consent to them. Purely editorial changes or changes
+          required by law remain unaffected.
         </p>
 
         <h3>10. Contact</h3>
@@ -223,14 +237,40 @@
         <h3>11. Governing law and jurisdiction</h3>
         <p>
           These Terms are governed by the laws of the Federal Republic of
-          Germany. Any disputes arising in connection with these Terms shall be
-          subject to the jurisdiction of the competent courts in Germany.
+          Germany, excluding the UN Convention on Contracts for the
+          International Sale of Goods. For consumers, this choice of law applies
+          only to the extent that it does not deprive them of mandatory
+          protections of the country of their habitual residence. Statutory
+          rules on jurisdiction remain unaffected.
         </p>
       </div>
     </div>
 
-    <footer>© 2026 Matthias Felix. All rights reserved.</footer>
+    <footer>
+      <span data-i18n="footer"
+        >© 2026 Matthias Felix. Alle Rechte vorbehalten.</span
+      >
+    </footer>
     <script>
+      const translations = {
+        de: {
+          "nav-home": "Startseite",
+          "nav-delete": "Konto löschen",
+          "nav-privacy": "Datenschutz",
+          "nav-terms": "Nutzungsbedingungen",
+          "nav-imprint": "Impressum",
+          footer: "© 2026 Matthias Felix. Alle Rechte vorbehalten.",
+        },
+        en: {
+          "nav-home": "Home",
+          "nav-delete": "Delete Account",
+          "nav-privacy": "Privacy Policy",
+          "nav-terms": "Terms of Service",
+          "nav-imprint": "Imprint",
+          footer: "© 2026 Matthias Felix. All rights reserved.",
+        },
+      };
+
       function setLang(lang) {
         localStorage.setItem("climbingtrack-lang", lang);
         showLang(lang);
@@ -242,6 +282,12 @@
           .forEach((el) => (el.style.display = "none"));
         const active = document.querySelector(".lang-" + lang);
         if (active) active.style.display = "block";
+
+        const t = translations[lang] || translations.de;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (t[key]) el.textContent = t[key];
+        });
       }
 
       const savedLang = localStorage.getItem("climbingtrack-lang") || "de";
