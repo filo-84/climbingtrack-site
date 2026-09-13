@@ -33,7 +33,7 @@
           Zweck der Verarbeitung personenbezogener Daten innerhalb der mobilen
           Anwendung ClimbingTrack sowie der damit verbundenen Dienste.
         </p>
-        <p><strong>Stand:</strong> 26. Juni 2026</p>
+        <p><strong>Stand:</strong> 13. September 2026</p>
 
         <h2>Verantwortlicher</h2>
         <p>
@@ -58,12 +58,17 @@
         <ul>
           <li>Bestandsdaten (z. B. Benutzername, E-Mail-Adresse)</li>
           <li>
-            Inhaltsdaten (z. B. Kommentare, Bewertungen, Begehungen, Likes)
+            Inhaltsdaten (z. B. Kommentare, Begehungen, Likes, Videos sowie
+            Bewertungen zur Schwierigkeit und zur Schönheit mit Sternen)
           </li>
           <li>Nutzungsdaten (z. B. Interaktionen innerhalb der App)</li>
           <li>
             Meta- und Kommunikationsdaten (z. B. Geräteinformationen,
             IP-Adresse)
+          </li>
+          <li>
+            Push- und Gerätedaten (z. B. Push-Token zur Zustellung von
+            Benachrichtigungen)
           </li>
           <li>Protokolldaten (z. B. Login-Zeitpunkte)</li>
         </ul>
@@ -77,8 +82,23 @@
           <li>Nutzerverwaltung und Authentifizierung</li>
           <li>Speicherung und Synchronisation von Kletterdaten</li>
           <li>
-            Community-Funktionen (Bewertungen, Begehungen, Likes, Kommentare)
+            Community-Funktionen (Bewertungen, Begehungen, Likes, Kommentare,
+            Videos)
           </li>
+          <li>Veröffentlichung und Meldung von Videos</li>
+          <li>
+            Optionale Weitergabe von Video und E-Mail-Adresse an Hallen-Admins
+            zur Kontaktaufnahme
+          </li>
+          <li>
+            Optionale Push-Benachrichtigungen (z. B. Release-Notes und
+            Hallen-News)
+          </li>
+          <li>
+            Wiederherstellung von Begehungen und Bewertungen sowie private
+            historische Statistiken
+          </li>
+          <li>Getrennte Sichtbarkeitsfreigaben für einzelne Inhalte</li>
           <li>
             Moderation von Kommentaren und Durchsetzung der Community-Regeln
           </li>
@@ -95,8 +115,10 @@
             sicherer Bereitstellung)
           </li>
           <li>
-            Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, sofern Analytics oder
-            freiwillige Formulardaten verarbeitet werden)
+            Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, insbesondere für
+            Push-Benachrichtigungen, das Hochladen von Videos, die öffentliche
+            Zuordnung von Inhalten, die optionale Kontaktaufnahme durch eine
+            Halle sowie freiwillige Formulardaten)
           </li>
         </ul>
 
@@ -105,17 +127,23 @@
         <h3>Firebase</h3>
         <p>
           Die App nutzt Firebase als Backend-Dienst zur Speicherung und
-          Synchronisation von Daten.
+          Synchronisation von Daten. Die Speicherung erfolgt in der Region
+          europe-west3 (Frankfurt, Deutschland).
         </p>
         <p>Dabei können verarbeitet werden:</p>
         <ul>
           <li>Benutzerkontodaten</li>
-          <li>App-Inhalte (Begehungen, Bewertungen, Likes, Kommentare)</li>
+          <li>
+            App-Inhalte (Begehungen, Bewertungen, Likes, Kommentare, Videos)
+          </li>
           <li>technische Logdaten</li>
         </ul>
         <p>
-          Firebase kann Daten auf Servern außerhalb der EU verarbeiten
-          (insbesondere USA).
+          Ergänzend eingesetzte Google-Dienste, insbesondere Google Sign-In und
+          Firebase Cloud Messaging (Push), können eine Verarbeitung außerhalb
+          der EU nicht ausschließen. Soweit dabei ein Drittlandtransfer erfolgt,
+          stützt sich dieser auf die Standardvertragsklauseln der Europäischen
+          Kommission sowie die Datenschutzhinweise von Google.
         </p>
         <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO</p>
         <p>
@@ -146,21 +174,48 @@
         </p>
         <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO</p>
 
+        <h3>Firebase Cloud Messaging</h3>
+        <p>
+          Für optionale Push-Benachrichtigungen nutzt die App Firebase Cloud
+          Messaging. Dabei kann ein gerätebezogenes Push-Token verarbeitet
+          werden, um Mitteilungen zuzustellen.
+        </p>
+        <p>
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Das Token
+          wird nicht mehr für Push verwendet, wenn die Erlaubnis widerrufen oder
+          das Konto gelöscht wird.
+        </p>
+
+        <h2>Sichtbarkeit</h2>
+        <p>
+          Andere Nutzer sehen von einem Profil grundsätzlich nur den
+          Benutzernamen. Begehungen, Bewertungen, Kommentare, Videos und
+          vergleichbare Inhalte können jeweils getrennt freigegeben werden.
+        </p>
+        <p>
+          Ohne die jeweilige Freigabe erfolgt keine öffentliche Zuordnung dieser
+          Inhalte zur Person. Der Nutzer entscheidet selbst, welche Inhalte
+          öffentlich zuordnungsfähig sind.
+        </p>
+        <p>
+          Rechtsgrundlage für die öffentliche Zuordnung: Art. 6 Abs. 1 lit. a
+          DSGVO (Einwilligung).
+        </p>
+
         <h2>Community-Funktionen</h2>
         <p>Die App ermöglicht:</p>
         <ul>
-          <li>Begehungen von Routen</li>
-          <li>Bewertungen von Routen</li>
+          <li>Begehungen von Routen (Ticks)</li>
+          <li>
+            Bewertungen von Routen (Schwierigkeit sowie Schönheit mit Sternen)
+          </li>
           <li>Likes</li>
-          <li>Kommentare und Videos</li>
+          <li>Kommentare</li>
+          <li>Videos</li>
         </ul>
         <p>
-          Diese Inhalte sind für andere Nutzer sichtbar, eine explizite
+          Diese Inhalte können für andere Nutzer sichtbar sein, eine explizite
           Zuordnung erfolgt nur nach vorheriger expliziter Zustimmung.
-        </p>
-        <p>
-          Der Nutzer entscheidet selbst, welche Inhalte öffentlich
-          zuordnungsfähig sind.
         </p>
         <p>
           Verfasste Kommentare können durch berechtigte Hallen-Admins und den
@@ -178,6 +233,66 @@
           Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren
           und regelkonformen Community).
         </p>
+
+        <h2>Videos</h2>
+        <p>
+          Nutzer können Videos hochladen und veröffentlichen. Die Videodateien
+          werden in Firebase Storage in der Region europe-west3 (Frankfurt)
+          gespeichert. Zusätzlich können Videos lokal auf den Geräten anderer
+          Nutzer gespeichert oder zwischengespeichert werden, damit sie in der
+          App angezeigt werden können.
+        </p>
+        <p>
+          Videos können gemeldet werden. Die Bearbeitung gemeldeter Videos
+          erfolgt durch Hallen-Admins.
+        </p>
+        <p>
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) für das
+          Hochladen und Veröffentlichen; Art. 6 Abs. 1 lit. b und lit. f DSGVO
+          für die Bearbeitung durch Hallen-Admins.
+        </p>
+        <p>
+          Nach Löschung eines Benutzerkontos können Videos anonymisiert weiter
+          gespeichert werden, solange die zugehörige Tour besteht. Sie werden
+          gelöscht, wenn die Tour abgeschraubt bzw. entfernt wird. Auf
+          ausdrücklichen Antrag werden Videos vorzeitig entfernt. Kopien, die
+          andere Nutzer bereits lokal gespeichert haben, können dort bis zur
+          nächsten Synchronisation vorübergehend vorhanden sein.
+        </p>
+        <p>
+          Nutzer können optional angeben, dass die Halle sie kontaktieren darf,
+          um ein Video unter Umständen außerhalb der App zu veröffentlichen.
+          Setzen sie diese Angabe, kann der Hallen-Admin das Video speichern und
+          erhält die angegebene E-Mail-Adresse. Der Nutzer willigt damit nur in
+          die Kontaktaufnahme ein, nicht in eine Veröffentlichung des Videos.
+          Das Setzen des Hakens ist keine ausdrückliche Zustimmung zur
+          Veröffentlichung.
+        </p>
+        <p>
+          Hallen-Admins dürfen die E-Mail-Adresse nur für diese Kontaktaufnahme
+          und nur für die Dauer dieser Nutzung speichern. Die ausdrückliche
+          Zustimmung zur Veröffentlichung des Videos einzuholen liegt in der
+          alleinigen Verantwortung des Hallenbetreibers. ClimbingTrack übernimmt
+          dafür keine Verantwortung und speichert diese Angabe nicht als
+          historischen Nachweis.
+        </p>
+        <p>
+          Rechtsgrundlage für die optionale Weitergabe von Video und
+          E-Mail-Adresse: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).
+        </p>
+
+        <h2>Push-Benachrichtigungen</h2>
+        <p>
+          Die App kann Push-Benachrichtigungen senden, sofern der Nutzer dies
+          erlaubt. Dazu gehören insbesondere Hinweise auf neue Release-Notes
+          sowie auf News-Einträge einer Halle.
+        </p>
+        <p>
+          Die Erlaubnis kann in der App bzw. in den Geräteeinstellungen
+          widerrufen werden. Release-Notes können außerdem in der App angezeigt
+          werden.
+        </p>
+        <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</p>
 
         <h2>Kontaktformular / Feedback</h2>
         <p>
@@ -212,19 +327,22 @@
           synchronisiert.
         </p>
         <p>
-          Kommentare und andere Community-Inhalte werden gespeichert, bis sie
-          vom Nutzer gelöscht, im Rahmen der Moderation entfernt oder bei
-          Löschung der zugehörigen Tour/Route gelöscht werden.
+          Begehungen und Bewertungen können länger gespeichert werden, um sie
+          wiederherstellen zu können. Begehungen, die nur der jeweilige Nutzer
+          selbst sieht, können für die Dauer des Kontos gespeichert bleiben,
+          insbesondere für private historische Statistiken.
+        </p>
+        <p>
+          Kommentare, Videos und andere Community-Inhalte werden gespeichert,
+          bis sie vom Nutzer gelöscht, im Rahmen der Bearbeitung entfernt oder
+          bei Löschung der zugehörigen Tour/Route gelöscht werden.
         </p>
         <p>
           Nach Löschung eines Benutzerkontos werden zugehörige personenbezogene
           Stammdaten unverzüglich gelöscht oder unwiderruflich anonymisiert.
-          Bereits veröffentlichte Inhalte, insbesondere Kommentare, können
-          anschließend weiterhin gespeichert und angezeigt werden, sofern sie
-          technisch und organisatorisch von der Identität der betroffenen Person
-          dauerhaft entkoppelt werden (Pseudonymisierung). Eine Zuordnung zu
-          einer Person wird dabei durch geeignete Maßnahmen soweit wie möglich
-          ausgeschlossen.
+          Ticks, Bewertungen und andere Inhalte können anschließend anonymisiert
+          weiter gespeichert werden. Eine Zuordnung zu einer Person wird dabei
+          durch geeignete Maßnahmen soweit wie möglich ausgeschlossen.
         </p>
         <p>
           Eine nachträgliche vollständige Entfernung einzelner Inhalte erfolgt
@@ -280,12 +398,16 @@
           <li>gesetzliche Verpflichtungen</li>
           <li>technische Dienstleister (insbesondere Firebase)</li>
           <li>
-            berechtigte Hallen-Admins, soweit dies zur Moderation von
-            Kommentaren und Community-Inhalten erforderlich ist
+            berechtigte Hallen-Admins, soweit dies zur Bearbeitung von
+            Kommentaren, Videos und anderen Community-Inhalten erforderlich ist
           </li>
           <li>
             Hallenadmins, bei Teilnahme des Nutzers an Wettkämpfen (nach
             expliziter Zustimmung in der App)
+          </li>
+          <li>
+            Hallen-Admins, wenn der Nutzer optional erlaubt, wegen eines Videos
+            kontaktiert zu werden (Video und angegebene E-Mail-Adresse)
           </li>
         </ul>
 
@@ -293,7 +415,8 @@
         <p>
           Personenbezogene Daten werden nur so lange gespeichert, wie es für die
           genannten Zwecke erforderlich ist oder gesetzliche
-          Aufbewahrungspflichten bestehen.
+          Aufbewahrungspflichten bestehen. Nach Kontolöschung können Daten
+          anonymisiert weiter aufgehoben werden.
         </p>
 
         <h2>Rechte der betroffenen Personen</h2>
@@ -350,7 +473,7 @@
           of the processing of personal data within the ClimbingTrack mobile
           application and its associated services.
         </p>
-        <p><strong>Last updated:</strong> June 26, 2026</p>
+        <p><strong>Last updated:</strong> September 13, 2026</p>
 
         <h2>Data Controller</h2>
         <p>
@@ -374,10 +497,17 @@
         <h3>Types of Data Processed</h3>
         <ul>
           <li>Account data (e.g. username, email address)</li>
-          <li>Content data (e.g. comments, ratings, climbing ticks, likes)</li>
+          <li>
+            Content data (e.g. comments, climbing ticks, likes, videos, and
+            ratings of difficulty and beauty using stars)
+          </li>
           <li>Usage data (e.g. interactions within the app)</li>
           <li>
             Meta and communication data (e.g. device information, IP address)
+          </li>
+          <li>
+            Push and device data (e.g. push tokens used to deliver
+            notifications)
           </li>
           <li>Log data (e.g. login timestamps)</li>
         </ul>
@@ -390,7 +520,23 @@
           <li>Providing app functionality</li>
           <li>User management and authentication</li>
           <li>Storing and synchronizing climbing data</li>
-          <li>Community features (ratings, climbing ticks, likes, comments)</li>
+          <li>
+            Community features (ratings, climbing ticks, likes, comments,
+            videos)
+          </li>
+          <li>Publishing and reporting videos</li>
+          <li>
+            Optional sharing of a video and email address with gym admins for
+            contact
+          </li>
+          <li>Optional push notifications (e.g. release notes and gym news)</li>
+          <li>
+            Restoring climbing ticks and ratings, and private historical
+            statistics
+          </li>
+          <li>
+            Separate visibility permissions for individual types of content
+          </li>
           <li>Comment moderation and enforcement of community rules</li>
           <li>Processing feedback and support requests</li>
           <li>Improving and analyzing application stability</li>
@@ -405,8 +551,9 @@
             provision)
           </li>
           <li>
-            Art. 6(1)(a) GDPR (consent, where analytics or voluntary form data
-            are processed)
+            Art. 6(1)(a) GDPR (consent, in particular for push notifications,
+            uploading videos, making content publicly attributable, optional
+            contact by a gym, and voluntary form data)
           </li>
         </ul>
 
@@ -415,17 +562,23 @@
         <h3>Firebase</h3>
         <p>
           The app uses Firebase as a backend service for storing and
-          synchronizing data.
+          synchronizing data. Data is stored in the europe-west3 region
+          (Frankfurt, Germany).
         </p>
         <p>Data that may be processed includes:</p>
         <ul>
           <li>User account data</li>
-          <li>App content (climbing ticks, ratings, likes, comments)</li>
+          <li>
+            App content (climbing ticks, ratings, likes, comments, videos)
+          </li>
           <li>Technical log data</li>
         </ul>
         <p>
-          Firebase may process data on servers outside the EU (in particular the
-          USA).
+          Additional Google services used by the app, in particular Google
+          Sign-In and Firebase Cloud Messaging (push), may involve processing
+          outside the EU. Where a third-country transfer takes place, it is
+          based on the European Commission’s Standard Contractual Clauses and
+          Google’s privacy notices.
         </p>
         <p>Legal basis: Art. 6(1)(b) GDPR</p>
         <p>
@@ -456,21 +609,42 @@
         </p>
         <p>Legal basis: Art. 6(1)(b) GDPR</p>
 
+        <h3>Firebase Cloud Messaging</h3>
+        <p>
+          The app uses Firebase Cloud Messaging for optional push notifications.
+          A device-related push token may be processed in order to deliver
+          messages.
+        </p>
+        <p>
+          Legal basis: Art. 6(1)(a) GDPR (consent). The token is no longer used
+          for push notifications if permission is withdrawn or the account is
+          deleted.
+        </p>
+
+        <h2>Visibility</h2>
+        <p>
+          Other users generally only see a username. Climbing ticks, ratings,
+          comments, videos, and similar content can each be shared separately.
+        </p>
+        <p>
+          Without the relevant permission, this content is not publicly
+          attributed to a person. Users decide for themselves which content is
+          publicly attributable to them.
+        </p>
+        <p>Legal basis for public attribution: Art. 6(1)(a) GDPR (consent).</p>
+
         <h2>Community Features</h2>
         <p>The app enables:</p>
         <ul>
-          <li>Logging climbing routes</li>
-          <li>Rating routes</li>
+          <li>Logging climbing routes (ticks)</li>
+          <li>Rating routes (difficulty as well as beauty using stars)</li>
           <li>Likes</li>
-          <li>Comments and videos</li>
+          <li>Comments</li>
+          <li>Videos</li>
         </ul>
         <p>
-          This content is visible to other users. Explicit attribution only
+          This content may be visible to other users. Explicit attribution only
           occurs with prior explicit consent.
-        </p>
-        <p>
-          Users decide for themselves which content is publicly attributable to
-          them.
         </p>
         <p>
           Posted comments may be viewed, reviewed, and deleted by authorized gym
@@ -486,6 +660,58 @@
           Legal basis for moderation: Art. 6(1)(b) GDPR and Art. 6(1)(f) GDPR
           (legitimate interest in maintaining a safe and compliant community).
         </p>
+
+        <h2>Videos</h2>
+        <p>
+          Users can upload and publish videos. Video files are stored in
+          Firebase Storage in the europe-west3 region (Frankfurt). In addition,
+          videos may be stored or cached locally on other users’ devices so they
+          can be displayed in the app.
+        </p>
+        <p>
+          Videos can be reported. Reported videos are handled by gym admins.
+        </p>
+        <p>
+          Legal basis: Art. 6(1)(a) GDPR (consent) for uploading and publishing;
+          Art. 6(1)(b) and (f) GDPR for handling by gym admins.
+        </p>
+        <p>
+          After account deletion, videos may continue to be stored in anonymized
+          form for as long as the related tour exists. They are deleted when the
+          tour is taken down. Videos are removed earlier upon explicit request.
+          Copies already stored locally by other users may temporarily remain on
+          their devices until the next synchronization.
+        </p>
+        <p>
+          Users may optionally indicate that the gym may contact them about
+          possibly publishing a video outside the app. If they do so, the gym
+          admin may store the video and receives the email address provided. The
+          user only consents to being contacted, not to publication of the
+          video. Checking the box is not explicit consent to publication.
+        </p>
+        <p>
+          Gym admins may store the email address only for this contact and only
+          for the duration of that use. Obtaining explicit consent to publish
+          the video is solely the gym operator’s responsibility. ClimbingTrack
+          accepts no responsibility for this and does not store this indication
+          as a historical record.
+        </p>
+        <p>
+          Legal basis for the optional sharing of the video and email address:
+          Art. 6(1)(a) GDPR (consent).
+        </p>
+
+        <h2>Push Notifications</h2>
+        <p>
+          The app may send push notifications if the user allows this. This
+          includes in particular notices about new release notes and gym news
+          posts.
+        </p>
+        <p>
+          Permission can be withdrawn in the app or in the device settings.
+          Release notes may also be shown in the app.
+        </p>
+        <p>Legal basis: Art. 6(1)(a) GDPR (consent)</p>
 
         <h2>Contact Form / Feedback</h2>
         <p>
@@ -515,18 +741,22 @@
         <h2>Storage and Synchronization</h2>
         <p>Data is stored in Firebase and synchronized across devices.</p>
         <p>
-          Comments and other community content are stored until deleted by the
-          user, removed as part of moderation, or deleted when the related
+          Climbing ticks and ratings may be stored for a longer period so they
+          can be restored. Ticks that are visible only to the respective user
+          may remain stored for the lifetime of the account, in particular for
+          private historical statistics.
+        </p>
+        <p>
+          Comments, videos, and other community content are stored until deleted
+          by the user, removed as part of review, or deleted when the related
           tour/route is deleted.
         </p>
         <p>
           After account deletion, associated personal account master data is
-          deleted without undue delay or irreversibly anonymized. Previously
-          published content, in particular comments, may continue to be stored
-          and displayed, provided it is permanently decoupled from the identity
-          of the data subject through technical and organizational measures
-          (pseudonymization). Attribution to a person is, to the extent
-          possible, prevented through appropriate safeguards.
+          deleted without undue delay or irreversibly anonymized. Ticks,
+          ratings, and other content may then continue to be stored in
+          anonymized form. Attribution to a person is, to the extent possible,
+          prevented through appropriate safeguards.
         </p>
         <p>
           Subsequent complete removal of individual content takes place only
@@ -577,19 +807,24 @@
           <li>Legal obligations</li>
           <li>Technical service providers (in particular Firebase)</li>
           <li>
-            Authorized gym admins where this is necessary to moderate comments
-            and community content
+            Authorized gym admins where this is necessary to handle comments,
+            videos, and other community content
           </li>
           <li>
             Gym admins when users participate in competitions (after explicit
             consent in the app)
+          </li>
+          <li>
+            Gym admins if the user optionally allows contact about a video
+            (video and the email address provided)
           </li>
         </ul>
 
         <h2>Retention Period</h2>
         <p>
           Personal data is only stored for as long as necessary for the stated
-          purposes or as required by statutory retention obligations.
+          purposes or as required by statutory retention obligations. After
+          account deletion, data may continue to be retained in anonymized form.
         </p>
 
         <h2>Rights of Data Subjects</h2>
@@ -643,7 +878,7 @@
       <span data-i18n="footer"
         >© 2026 Matthias Felix. Alle Rechte vorbehalten.</span
       >
-      <span class="site-version">Version 1.0.1</span>
+      <span class="site-version">Version 1.1.0</span>
     </footer>
     <script>
       const translations = {
